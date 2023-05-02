@@ -12,12 +12,17 @@ import Thursday from './routes/trainingDays/Thursday';
 import Friday from './routes/trainingDays/Friday';
 import Saturday from './routes/trainingDays/Saturday';
 import Sunday from './routes/trainingDays/Sunday';
+import MainLoginPage from './components/MainLoginPage';
+import SignUp from './components/SignUp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
+        <Route path='loginpage' element={<MainLoginPage/>}/>
+        <Route path='signup' element={<SignUp/>}/>
+
         <Route path='' element={<App/> }>
           <Route path='home' element={<Home/> }/>
           <Route path='workout' element={<Workouts/> }>
