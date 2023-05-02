@@ -16,7 +16,7 @@ This web app is designed to help you track your workouts and exercise routines. 
 
 To use this web app, simply follow these steps:
 
-1. [Clone](git clone https://github.com/abrarhussain-00/fitgenie.git) this repository to your local machine.
+1. [Clone](git clone https://github.com/abrarhussain-00/ironshell.git) this repository to your local machine.
 2. Open the repository in your preferred code editor.
 3. Install the necessary dependencies by running `npm install`.
 4. Start the development server by running `npm start`.
