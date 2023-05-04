@@ -18,7 +18,7 @@ export default function WorkoutTypeCard({workoutDay}) {
     <div>
         <WorkoutDay text={workoutDay}/>
         <Button text={"Add workouts"} classes={"red rounded-pill w-50"} onClick={addWorkout}/>
-        {workouts.map(workout=>(<Workout key={workout.id} workout={workout} onClick={handleRemoveWorkout}/>))}
+        {workouts.map(workout=>(<Workout key={workout.id} workout={workout} onClick={()=>handleRemoveWorkout(workout.id)}/>))}
     </div>
   )
 }

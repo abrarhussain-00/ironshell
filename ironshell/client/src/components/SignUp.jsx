@@ -23,12 +23,16 @@ const SignUp = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         axios.post("http://localhost:8000/api/users", {
-            firstName
+            firstName,
+            lastName,
+            email,
+            password,
+            confirmPassword
         }).then(res=> navigate('/home')).catch(err => console.log(err));
     };
     return (
         <Box sx={{ mt: { lg: '150px', xs: '70px' }, ml: { sm: '50px' } }} position='relative' p='20px'>
-            <Typography color='red' fontWeight='600' fontSize='25px'>
+            <Typography color='white' fontWeight='600' fontSize='50px'>
                 Ironshell | Fitness Club
             </Typography>
             <Box style={{ marginTop: '5%'}}>

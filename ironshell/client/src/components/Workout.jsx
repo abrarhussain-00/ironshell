@@ -2,7 +2,7 @@ import React from 'react'
 import {AiFillDelete} from 'react-icons/ai'
 import Dropdown from './Dropdown'
 
-export default function Workout(onClick, workout) {
+export default function Workout({onClick, workout}) {
   return (
     <div className='card m-3 p-3 shadown'>
         <div className="row align-items-center">
