@@ -15,7 +15,7 @@ const MainLoginPage = () => {
             </Typography>
         <Box>
             <div style={{ marginLeft: '5%', marginRight: '5%',  marginTop: '10px' }}>
-                <Link to='/signup'><Button variant='contained' style={{marginRight:'10px'}}>Ready to invest in yourself?</Button></Link>
+                <Link to='/signup'><Button variant='contained' style={{marginRight:'30px'}}>Ready to invest in yourself?</Button></Link>
                 <Link to='/login'><Button variant='contained'>Already a member?</Button></Link>
             </div>
         </Box>

@@ -5,29 +5,20 @@ import { Stack, Button, Typography, Box, MenuItem, TextField, Grid} from '@mui/m
 import { useState } from 'react';
 import axios from 'axios'
 
-const SignUp = () => {
+const Login = () => {
     const navigate = useNavigate();
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
 
     const [errors,setErrors]= useState({
-        firstName: "",
-        lastName:"",
         email:"",
         password:"",
-        confirmPassword: "",
     })
     const handleSubmit = (event) => {
         event.preventDefault();
         axios.post("http://localhost:8000/api/users", {
-            firstName,
-            lastName,
             email,
             password,
-            confirmPassword
         }).then(res=> navigate('/home')).catch(err => console.log(err));
     };
     return (
@@ -46,26 +37,6 @@ const SignUp = () => {
                                 <Stack direction="column" spacing={2} style={{marginTop: '50px', marginLeft:'100px', marginBottom:'50px' }}>
                                         <Grid item xs={12} sm={6}>
                                             <TextField
-                                                label="First Name"
-                                                variant="outlined"
-                                                value={firstName}
-                                                required
-                                                onChange={(e) => setFirstName(e.target.value)}
-                                                fullWidth
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12} sm={6}>
-                                            <TextField
-                                                label="Last Name"
-                                                variant="outlined"
-                                                value={lastName}
-                                                required
-                                                onChange={(e) => setLastName(e.target.value)}
-                                                fullWidth
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12} sm={6}>
-                                            <TextField
                                                 label="Email"
                                                 variant="outlined"
                                                 value={email}
@@ -82,18 +53,6 @@ const SignUp = () => {
                                                 required
                                                 onChange={(e) => setPassword(e.target.value)}
                                                 fullWidth
-                                                type='password'
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12} sm={6}>
-                                            <TextField
-                                                label="Confirm Password"
-                                                variant="outlined"
-                                                value={confirmPassword}
-                                                required
-                                                onChange={(e) => setConfirmPassword(e.target.value)}
-                                                fullWidth
-                                                type='password'
                                             />
                                         </Grid>
                                         <Button 
@@ -101,7 +60,7 @@ const SignUp = () => {
                                             variant="contained" 
                                             color="primary"
                                             size="small">
-                                                Sign Up
+                                                Login
                                         </Button>
                                 </Stack>
                             </form>
@@ -114,4 +73,4 @@ const SignUp = () => {
     )
 }
 
-export default SignUp
+export default Login

@@ -14,6 +14,8 @@ import Saturday from './routes/trainingDays/Saturday';
 import Sunday from './routes/trainingDays/Sunday';
 import MainLoginPage from './components/MainLoginPage';
 import SignUp from './components/SignUp';
+import Login from './components/Login';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +24,7 @@ root.render(
       <Routes>
         <Route path='loginpage' element={<MainLoginPage/>}/>
         <Route path='signup' element={<SignUp/>}/>
+        <Route path='login' element={<Login/>}/>
 
         <Route path='' element={<App/> }>
           <Route path='home' element={<Home/> }/>
@@ -48,6 +51,7 @@ root.render(
           </main>}/>
         </Route>
     </Routes>
+    {/* <Footer/> */}
   </Router>
   </React.StrictMode>
 );
